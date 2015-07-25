@@ -41,10 +41,9 @@ p {
 </style>
 
 <script type="text/javascript">
- function openPage(pageURL)
- {
- window.location.href = pageURL;
- }
+	function openPage(pageURL) {
+		window.location.href = pageURL;
+	}
 </script>
 
 </head>
@@ -64,19 +63,13 @@ p {
 						sign in or make an account to post on the website
 					</p>
 					<form>
-						<div>
-							<label> 
-							<span>Username: </span>
-							<input id="username" name="user" type="text">
-							</label> 
-							<br> 
-							<label> 
-							<span>Password: </span>
-							<input id="password" name="pw" type="text">
-							</label> 
-							<br> <br> 
-							<input type="button" value="Sign In" name="Sign in" />
-							<input type="button" value="Sign Up" name="Sign Up" onclick="openPage('register_form/index.jsp')" />
+						<div><label> <span>Username: </span> <input
+								id="username" name="user" type="text">
+						</label> <br> <label> <span>Password: </span> <input
+								id="password" name="pw" type="text">
+						</label> <br> <br> <input type="button" value="Sign In"
+							name="Sign in" /> <input type="button" value="Sign Up"
+							name="Sign Up" onclick="openPage('register_form/index.jsp')" />
 						</div>
 					</form>
 				</td>
@@ -85,6 +78,7 @@ p {
 	</table>
 	<br>
 	<br>
-	<p style="color: white; font-weight: bold;">Copyright © 2015 Alfred M. Smith</p>
+	<p style="color: white; font-weight: bold;">Copyright &copy; 2015
+		Alfred M. Smith &amp; RayLite</p>
 </body>
 </html>

@@ -95,16 +95,17 @@ textarea:focus, input:focus {
 
 <body>
 	<h1 style="text-align: center;">Water Ford Park</h1>
-	
+
 	<form>
 		<div>
 			<h2>Registration Form:</h2>
-			<label> <span>Last Name</span><input id="last_name" name="last name" type="text"></label>
-			<label> <span>First Name</span><input id="first_name" name="first name" type="text"></label>
-			<label> <span>Email Address</span><input id="email" name="email" type="text"></label>
-			<label> <span>Username</span><input id="username" name="username" type="text"></label>
-			<br>
-			<input type="button" value="Submit Form"></label>
+			<label> <span>Last Name</span><input id="last_name"
+				name="last name" type="text"></label> <label> <span>First
+					Name</span><input id="first_name" name="first name" type="text"></label> <label>
+				<span>Email Address</span><input id="email" name="email" type="text">
+			</label> <label> <span>Username</span><input id="username"
+				name="username" type="text"></label> <br> <label><input
+				type="button" value="Submit Form"></label>
 		</div>
 	</form>
 </body>
