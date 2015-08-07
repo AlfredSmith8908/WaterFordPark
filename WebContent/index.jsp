@@ -84,7 +84,7 @@
 			stealing. Basically provide NEWS CLIPS with a link to the original
 			news source to allow them to read further if they wish. This way
 			everyone is a happy data pig.<br>
-			CATS! EVERYWHERE!</br>
+			CATS! EVERYWHERE!<br>
 			 example bs words repeated over
 			and over, omg why the heck am I still up at 4am!?? example bs words repeated over
 			and over, omg why the heck am I still up at 4am!??example bs words repeated over
