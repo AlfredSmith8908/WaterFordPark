@@ -1,0 +1,579 @@
+@CHARSET "UTF-8";
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background: #ff7a20;
+	font-size: 0;
+	text-align: left;
+	display: block;
+	top: 0;
+	left: 0;
+	height: 110px;
+	width: 100%;
+	position: fixed;
+	z-index: 3;
+}
+
+#header_left_child {
+	background: #2eafb0;
+	/* Custom backgrounds to support multiple browsers */
+	background: -moz-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6ec1c2),
+		color-stop(100%, #2eafb0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #6ec1c2 0%, #2eafb0 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6ec1c2',
+		endColorstr='#2eafb0', GradientType=0); /* IE6-8 */
+	/* Custom properties of the menu look and feel */
+	height: 100px;
+	margin-top: 10px;
+	color: white;
+	font-size: 24px;
+	float: left;
+	display: inline-block;
+	width: 75%;
+}
+
+#header_right_child {
+	background: #2eafb0;
+	/* Custom backgrounds to support multiple browsers */
+	background: -moz-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6ec1c2),
+		color-stop(100%, #2eafb0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #6ec1c2 0%, #2eafb0 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6ec1c2',
+		endColorstr='#2eafb0', GradientType=0); /* IE6-8 */
+	/* Custom properties of the menu look and feel */
+	margin-top: 10px;
+	height: 100px;
+	float: right;
+	display: inline-block;
+	width: 25%;
+	padding: 0;
+	height: 100px;
+}
+
+#header_title {
+	width: 100%;
+	padding-left: 20px;
+	font-family: verdana;
+	font-size: 36px;
+	color: #ffffff;
+}
+
+#header_right_child p {
+	color: #ffffff;
+	font-size: 18px;
+	margin-top: 25px;
+}
+
+/* --------- top menu bar --------------- */
+#header_menu_container {
+	margin: 100px 0px 0px 0px;
+	padding: 0;
+	width: 100%;
+	position: relative;
+	z-index: 0;
+}
+
+/* nav-ul (top menu buttons look and feel, NOT Hovering) */
+#header_nav_menu ul {
+	background: #2eafb0; /* Old browsers */
+	box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.5);
+	list-style: none;
+	position: relative;
+	display: block; /* makes menu bar wrap screen width (inline won't) */
+	text-decoration: none;
+	font-family: Verdana, Copperplate Gothic Light, Georgia, Palatino,
+		Times New Roman, serif;
+	font-size: 17px;
+	color: #ffffff;
+	font-weight: light;
+	outline: none;
+}
+
+/* Clears stuff out of the way after the menu bar */
+#header_nav_menu ul:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+/* List items ltr(left), rtl(right),top-bot/vertically(center) */
+#header_nav_menu ul li {
+	float: left;
+}
+
+/* Top-level menu buttons, Hovering look and feel */
+#header_nav_menu ul li:hover {
+	transition: all 0.5s ease-in-out;
+	/*all (bg and text) OR background (just bg)*/
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	background: #f3f3f3;
+	text-decoration: none;
+	font-family: Verdana, Copperplate Gothic Light, Georgia, Palatino,
+		Times New Roman, serif;
+	font-size: 17px;
+	color: #2eafb0;
+	font-weight: light;
+	outline: none;
+	filter: alpha(opacity = 100);
+	opacity: 1;
+	-moz-opacity: 1;
+}
+
+/* Top level menu button and link styling */
+#header_nav_menu ul li a {
+	color: #ffffff; /* Top-level menu button link-text color */
+	display: block;
+	padding: 12px 20px;
+	text-decoration: none;
+	filter: alpha(opacity = 100);
+	opacity: 1;
+	-moz-opacity: 1;
+}
+
+/* menu and submenu text on hovering */
+#header_nav_menu ul li:hover a {
+	color: #2eafb0; /* menu item and sub-item text color on hover */
+	filter: alpha(opacity = 100);
+	opacity: 1;
+	-moz-opacity: 1;
+}
+
+/* Tells the nav-ul-ul level not to always display menu contents */
+#header_nav_menu ul ul {
+	display: none;
+}
+
+/* no change if removed */
+#header_nav_menu ul li:hover>ul {
+	background: #f1831d; /* Sub-menu background color */
+	text-decoration: none;
+	display: block; /* sub-menu allowed to display */
+	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
+		sans-serif;
+	font-size: 14px;
+	font-weight: light;
+	outline: none;
+	filter: alpha(opacity = 95); /* transparency */
+	opacity: 0.95;
+	-moz-opacity: 0.95;
+	padding: 0;
+	position: absolute; /* Only show 1 block, current tabbed menu list */
+	z-index: 2;
+	list-style-type: none;
+}
+
+/* no change if removed */
+#header_nav_menu ul li:hover>ul li a {
+	text-decoration: none;
+	color: #ffffff;
+	filter: alpha(opacity = 100);
+	opacity: 1;
+	-moz-opacity: 1;
+	padding: 10px 40px 10px 15px;
+	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
+		sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: left;
+}
+
+/* no change if removed */
+#header_nav_menu ul li:hover>ul li a:hover {
+	background: #f1831d; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: -moz-linear-gradient(top, #f3f3f3 60%, #f1831d 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #f3f3f3),
+		color-stop(100%, #f1831d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f3f3f3 60%, #f1831d 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f3f3f3 60%, #f1831d 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f3f3f3 60%, #f1831d 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #f3f3f3 60%, #f1831d 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3',
+		endColorstr='#f1831d', GradientType=0); /* IE6-8 */
+	filter: alpha(opacity = 100);
+	color: #7f2b82;
+	opacity: 1;
+	-moz-opacity: 1;
+	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
+		sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: left;
+}
+
+/* Sub-menu list item, No Change when Removed */
+#header_nav_menu ul ul li {
+	text-decoration: none;
+	float: none;
+	position: relative;
+}
+/* End header and menu css */
+.body_container {
+	position: relative;
+	z-index: -1;
+	background: #f3f3f3 url("../res/img/body_bg.png");
+}
+
+.body_section { /* position is static by default */
+	margin: 0px 100px;
+	word-wrap: break-word;
+}
+
+h2 {
+	font-family: Verdana;
+	color: #ff7a20;
+	text-align: center;
+}
+
+h2:before {
+	display: block;
+	content: " ";
+	margin-top: -110px;
+	height: 110px;
+	visibility: hidden;
+}
+
+#top_span_anchor {
+	display: block;
+	content: " ";
+	margin-top: -160px;
+	height: 160px;
+	visibility: hidden;
+}
+
+.return_top_div {
+	position: relative;
+	margin-right: 40px;
+	text-align: right;
+	right: 0;
+	bottom: 0;
+}
+
+footer {
+	position: relative;
+	z-index: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 110px;
+	margin-top: 20px;
+	background-color: #ff7a20;
+	text-align: center;
+	color: #ffffff;
+}
+
+footer #left_footer_child {
+	background-color: #2eafb0;
+	height: 100px;
+	margin: 0;
+	color: #ffffff;
+	float: left;
+	display: inline-block;
+	width: 50%;
+}
+
+footer #right_footer_child {
+	background-color: #2eafb0;
+	height: 100px;
+	float: right;
+	display: inline-block;
+	width: 50%;
+	height: 100px;
+}
+
+.three-column {
+	padding: 1em;
+	-moz-column-count: 3;
+	-moz-column-gap: 1em;
+	-webkit-column-count: 3;
+	-webkit-column-gap: 1em;
+	column-count: 3;
+	column-gap: 1em;
+}
+
+.two-column {
+	padding: 1em;
+	-moz-column-count: 2;
+	-moz-column-gap: 1em;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 1em;
+	column-count: 2;
+	column-gap: 1em;
+}
+
+/* --------  LOGIN STYLING ALL HERE  ---------- */
+#lean_overlay {
+	position: fixed;
+	z-index: 100;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	display: none;
+}
+
+.popupContainer {
+	position: absolute;
+	width: 330px;
+	height: auto;
+	left: 45%;
+	top: 80px;
+	background: #FFF;
+}
+
+#modal_trigger {
+	
+}
+
+.btn {
+	padding: 10px 20px;
+	background: #F4F4F2;
+}
+
+.btn_red {
+	background: #E2769F;
+	color: #FFF;
+}
+
+.btn:hover {
+	background: #E4E4E2;
+}
+
+.btn_red:hover {
+	background: #e41a6a;
+}
+
+a.btn {
+	color: #666;
+	text-align: center;
+	text-decoration: none;
+	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
+		sans-serif;
+}
+
+a.btn_red {
+	color: #FFF;
+	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
+		sans-serif;
+}
+
+.one_half {
+	width: 48%;
+	display: block;
+	float: left;
+	border-right: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+}
+
+.one_half.last {
+	width: 45%;
+	margin-left: 5%;
+}
+
+/* Popup Styles*/
+.popupHeader_title {
+	font-size: 16px;
+	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
+		sans-serif;
+	text-transform: uppercase;
+	color: #f1831d;
+}
+
+.popupHeader {
+	background: #F4F4F2;
+	position: relative;
+	padding: 10px 20px;
+	border-bottom: 1px solid #DDD;
+	font-weight: bold;
+}
+
+.popupHeader .modal_close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 10px 15px;
+	background: #E4E4E2;
+	cursor: pointer;
+	color: #aaa;
+	font-size: 16px;
+}
+
+.popupBody {
+	padding: 20px;
+}
+
+/* Social Login Form */
+.social_login {
+	
+}
+
+.social_login .social_box {
+	display: block;
+	clear: both;
+	padding: 10px;
+	margin-bottom: 10px;
+	background: #F4F4F2;
+	border-right: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	overflow: hidden;
+}
+
+.social_login .icon {
+	display: block;
+	width: 10px;
+	padding: 5px 10px;
+	margin-right: 10px;
+	float: left;
+	color: #FFF;
+	font-size: 16px;
+	text-align: center;
+}
+
+.social_login .fb .icon {
+	background: #3B5998;
+}
+
+.social_login .google .icon {
+	background: #DD4B39;
+}
+
+.social_login .icon_title {
+	display: block;
+	padding: 5px 0;
+	float: left;
+	font-weight: bold;
+	font-size: 16px;
+	color: #777;
+}
+
+.social_login .social_box:hover {
+	background: #E4E4E2;
+}
+
+.centeredText {
+	text-align: center;
+	margin: 20px 0;
+	clear: both;
+	overflow: hidden;
+	color: #2eafb0;
+	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
+		sans-serif;
+	text-transform: uppercase;
+}
+
+.action_btns {
+	clear: both;
+	overflow: hidden;
+}
+
+.action_btns a {
+	display: block;
+}
+
+/* User Login Form */
+.user_login {
+	display: none;
+}
+
+.user_login label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.user_login input[type="text"], .user_login input[type="email"],
+	.user_login input[type="password"] {
+	display: block;
+	width: 90%;
+	padding: 10px;
+	border: 1px solid #DDD;
+	color: #666;
+}
+
+.user_login input[type="checkbox"] {
+	float: left;
+	margin-right: 5px;
+}
+
+.user_login input[type="checkbox"]+label {
+	float: left;
+}
+
+.user_login .checkbox {
+	margin-bottom: 10px;
+	clear: both;
+	overflow: hidden;
+}
+
+.forgot_password {
+	display: block;
+	margin: 20px 0 10px;
+	clear: both;
+	overflow: hidden;
+	text-decoration: none;
+	color: #E2769F;
+}
+
+/* User Register Form */
+.user_register {
+	display: none;
+}
+
+.user_register label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.user_register input[type="text"], .user_register input[type="email"],
+	.user_register input[type="password"] {
+	display: block;
+	width: 90%;
+	padding: 10px;
+	border: 1px solid #DDD;
+	color: #666;
+}
+
+.user_register input[type="checkbox"] {
+	float: left;
+	margin-right: 5px;
+}
+
+.user_register input[type="checkbox"]+label {
+	float: left;
+}
+
+.user_register .checkbox {
+	margin-bottom: 10px;
+	clear: both;
+	overflow: hidden;
+}
