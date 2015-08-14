@@ -44,4 +44,40 @@ public class UserInfoDAO {
 			throw new IllegalStateException("Cannot connect the database!", e);
 		}
 	}
+
+	public UserInfoDTO setUserInfo(String userName, String password) {
+		System.out.println("Connecting database...");
+		try (Connection connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD)) {
+			System.out.println("Database connected!  ready to write");
+			Statement statement = connection.createStatement();
+			String sql = ("INSERT INTO Users (User_Name, User_Password) VALUES ('" + userName + "', '" + password
+					+ "');");
+			statement.executeQuery(sql);
+			statement.close();
+
+			System.out.println("Written!");
+
+			String sql2 = ("SELECT * FROM Users WHERE User_Name = '" + userName + "';");
+			Statement statement2 = connection.createStatement();
+			ResultSet rs = statement2.executeQuery(sql2);
+
+			UserInfoDTO userInfo = new UserInfoDTO();
+			if (rs.next()) {
+				System.out.println(rs.getString("User_ID"));
+				userInfo.setUserId(rs.getString("User_ID"));
+
+				System.out.println(rs.getString("User_Name"));
+				userInfo.setUserName(rs.getString("User_Name"));
+
+				System.out.println(rs.getString("User_Password"));
+				userInfo.setUserPassword(rs.getString("User_Password"));
+			}
+			statement.close();
+			connection.close();
+			return userInfo;
+		} catch (SQLException e) {
+			throw new IllegalStateException("Cannot connect the database!", e);
+		}
+	}
+
 }
