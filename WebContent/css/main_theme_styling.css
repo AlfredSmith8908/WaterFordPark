@@ -6,15 +6,12 @@ html, body {
 }
 
 header {
-	/* text-align: left; */
-	/* display: block; */
 	width: 100%;
 	height: 160px;
-	overflow: hidden;
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 999;
+	z-index: 888;
 	background-color: #ff7a20;
 	
 	-webkit-transition: height 0.3s;
@@ -26,36 +23,9 @@ header {
 
 header #header_container {
 	height: 150px;
-	width: 50%;
+	width: 100%;
 	margin-top: 10px;
-	float: left;
-	display: inline-block;
-	
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
-	
-	background: #2eafb0;
-	background: -moz-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6ec1c2),
-		color-stop(100%, #2eafb0)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #6ec1c2 0%, #2eafb0 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6ec1c2',
-		endColorstr='#2eafb0', GradientType=0); /* IE6-8 */
-}
-
-header div#header_right_child {
 	position: relative;
-	height: 150px;
-	width: 50%;
-	margin-top: 10px;
-	float: right;
-	display: inline-block;
 	
 	-webkit-transition: all 0.3s;
 	-moz-transition: all 0.3s;
@@ -77,21 +47,27 @@ header div#header_right_child {
 
 header #login_div {
 	float: right;
+	margin-right: 20px;
+}
+
+header #login_div a {
+	color: #ffffff;
+	text-decoration: none;
+	font-family: Verdana, Copperplate Gothic Light, serif;
 }
 
 header #header_title {
+	float: left;
 	padding-left: 20px;
 	font-family: verdana;
-	font-size: 36px;
 	color: #ffffff;
 }
 
-header #header_left_child p {
+header p {
+	float: left;
+	padding-left: 20px;
+	font-family: verdana;
 	color: #ffffff;
-}
-
-#header_right_child div {
-	float: right;
 }
 
 /* --- HEADER NAV MENU --- */
@@ -110,13 +86,6 @@ header #header_left_child p {
 	color: #ffffff;
 	font-weight: light;
 	outline: none;
-}
-
-/* Clears stuff out of the way after the menu bar */
-#header_nav_menu ul:after {
-	content: "";
-	clear: both;
-	display: block;
 }
 
 /* List items ltr(left), rtl(right),top-bot/vertically(center) */
@@ -165,6 +134,7 @@ header #header_left_child p {
 /* Tells the nav-ul-ul level not to always display menu contents */
 #header_nav_menu ul ul {
 	display: none;
+	z-index: 889
 }
 
 /* no change if removed */
@@ -235,13 +205,10 @@ header.smaller {
     height: 75px;
 }
 header.smaller #header_title {
-    width: 150px;
     height: 75px;
-    line-height: 75px;
     font-size: 30px;
 }
 header.smaller #header_nav_menu {
-    line-height: 75px;
 }
 
 @media all and (max-width: 660px) {
@@ -250,7 +217,6 @@ header.smaller #header_nav_menu {
         float: none;
         margin: 0 auto;
         height: 100px;
-        line-height: 100px;
         text-align: center;
     }
     header #header_nav_menu {
@@ -261,7 +227,6 @@ header.smaller #header_nav_menu {
         margin: 0 auto;
     }
     header #header_nav_menu ul {
-        line-height: 50px;
         margin: 0 10px;
     }
     header.smaller {
@@ -269,14 +234,12 @@ header.smaller #header_nav_menu {
     }
     header.smaller #header_title {
         height: 40px;
-        line-height: 40px;
         font-size: 30px;
     }
     header.smaller #header_nav_menu {
         height: 35px;
     }
     header.smaller #header_nav_menu ul {
-        line-height: 35px;
     }
 }
 
@@ -318,6 +281,7 @@ h2:before {
 .return_top_div {
 	position: relative;
 	margin-right: 40px;
+	padding-bottom: 20px;
 	text-align: right;
 	right: 0;
 	bottom: 0;
@@ -378,7 +342,7 @@ footer #right_footer_child {
 /* --------  LOGIN STYLING ALL HERE  ---------- */
 #lean_overlay {
 	position: fixed;
-	z-index: 100;
+	z-index: 999;
 	top: 0px;
 	left: 0px;
 	height: 100%;

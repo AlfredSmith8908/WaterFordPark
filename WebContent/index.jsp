@@ -33,16 +33,13 @@
 
 <body>
 
+	<!-- ----- BEGIN HEADER ----- -->
 	<header>
 	<div id="header_container">
 		<div id="login_div"><a id="modal_trigger" href="#modal">Login</a></div>
 		
-		<h1 id="header_title">Waterford Park Community</h1>
-		<p>YOUR SOURCE FOR COMMUNITY EVENTS</p>
-	</div>
 	<!-- ---------- HEADER MENU NAV BAR ----------- -->
-	<div id="header_right_child">
-		<div><a id="modal_trigger" href="#modal">Login</a></div><br>
+	<div id="header_menu_div">
 		<nav id="header_nav_menu">
 		<ul>
 			<li><a href="index.jsp"><img src="res/img/menu_home_icon.png" alt="menu home icon"></img></a></li>
@@ -71,8 +68,14 @@
 		</ul>
 		</nav>
 	</div>
-	</header>
-	<!-- END HEADER -->
+	
+	<!-- END HEADER MENU -->
+		
+		<div id="header_title">Waterford Park Community
+		<p>YOUR SOURCE FOR COMMUNITY EVENTS</p></div>
+	</div>
+</header>
+	
 
 <!----------- BEGIN LOGIN POPUP FORM ------------>
 <div class="container">
