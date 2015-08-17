@@ -6,105 +6,106 @@ html, body {
 }
 
 header {
-	background: #ff7a20;
-	font-size: 0;
-	text-align: left;
-	display: block;
+	/* text-align: left; */
+	/* display: block; */
+	width: 100%;
+	height: 160px;
+	overflow: hidden;
+	position: fixed;
 	top: 0;
 	left: 0;
-	height: 110px;
-	width: 100%;
-	position: fixed;
-	z-index: 3;
+	z-index: 999;
+	background-color: #ff7a20;
+	
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	-ms-transition: height 0.3s;
+	-o-transition: height 0.3s;
+	transition: height 0.3s;
 }
 
-#header_left_child {
-	background: #2eafb0;
-	/* Custom backgrounds to support multiple browsers */
-	background: -moz-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
-	/* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6ec1c2),
-		color-stop(100%, #2eafb0)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
-	/* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
-	/* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
-	/* IE10+ */
-	background: linear-gradient(to bottom, #6ec1c2 0%, #2eafb0 100%);
-	/* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6ec1c2',
-		endColorstr='#2eafb0', GradientType=0); /* IE6-8 */
-	/* Custom properties of the menu look and feel */
-	height: 100px;
+header #header_container {
+	height: 150px;
+	width: 50%;
 	margin-top: 10px;
-	color: white;
-	font-size: 24px;
 	float: left;
 	display: inline-block;
-	width: 75%;
-}
-
-#header_right_child {
+	
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	
 	background: #2eafb0;
-	/* Custom backgrounds to support multiple browsers */
-	background: -moz-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
-	/* FF3.6+ */
+	background: -moz-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6ec1c2),
 		color-stop(100%, #2eafb0)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
-	/* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
-	/* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%);
-	/* IE10+ */
-	background: linear-gradient(to bottom, #6ec1c2 0%, #2eafb0 100%);
-	/* W3C */
+	background: -webkit-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #6ec1c2 0%, #2eafb0 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6ec1c2',
 		endColorstr='#2eafb0', GradientType=0); /* IE6-8 */
-	/* Custom properties of the menu look and feel */
-	margin-top: 10px;
-	height: 100px;
-	float: right;
-	display: inline-block;
-	width: 25%;
-	padding: 0;
-	height: 100px;
 }
 
-#header_title {
-	width: 100%;
+header div#header_right_child {
+	position: relative;
+	height: 150px;
+	width: 50%;
+	margin-top: 10px;
+	float: right;
+	display: inline-block;
+	
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	
+	background: #2eafb0;
+	background: -moz-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6ec1c2),
+		color-stop(100%, #2eafb0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #6ec1c2 0%, #2eafb0 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6ec1c2',
+		endColorstr='#2eafb0', GradientType=0); /* IE6-8 */
+}
+
+header #login_div {
+	float: right;
+}
+
+header #header_title {
 	padding-left: 20px;
 	font-family: verdana;
 	font-size: 36px;
 	color: #ffffff;
 }
 
-#header_right_child p {
+header #header_left_child p {
 	color: #ffffff;
-	font-size: 18px;
-	margin-top: 25px;
 }
 
-/* --------- top menu bar --------------- */
-#header_menu_container {
-	margin: 100px 0px 0px 0px;
-	padding: 0;
-	width: 100%;
-	position: relative;
-	z-index: 0;
+#header_right_child div {
+	float: right;
 }
 
-/* nav-ul (top menu buttons look and feel, NOT Hovering) */
+/* --- HEADER NAV MENU --- */
+#header_nav_menu {
+	display: inline-block;
+	float: right;
+}
+
 #header_nav_menu ul {
-	background: #2eafb0; /* Old browsers */
-	box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.5);
 	list-style: none;
 	position: relative;
 	display: block; /* makes menu bar wrap screen width (inline won't) */
 	text-decoration: none;
-	font-family: Verdana, Copperplate Gothic Light, Georgia, Palatino,
-		Times New Roman, serif;
+	font-family: Verdana, Copperplate Gothic Light, serif;
 	font-size: 17px;
 	color: #ffffff;
 	font-weight: light;
@@ -132,8 +133,7 @@ header {
 	-o-transition: all 0.5s ease;
 	background: #f3f3f3;
 	text-decoration: none;
-	font-family: Verdana, Copperplate Gothic Light, Georgia, Palatino,
-		Times New Roman, serif;
+	font-family: Verdana, Copperplate Gothic Light, serif;
 	font-size: 17px;
 	color: #2eafb0;
 	font-weight: light;
@@ -172,8 +172,7 @@ header {
 	background: #f1831d; /* Sub-menu background color */
 	text-decoration: none;
 	display: block; /* sub-menu allowed to display */
-	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
-		sans-serif;
+	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial, sans-serif;
 	font-size: 14px;
 	font-weight: light;
 	outline: none;
@@ -194,8 +193,7 @@ header {
 	opacity: 1;
 	-moz-opacity: 1;
 	padding: 10px 40px 10px 15px;
-	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
-		sans-serif;
+	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial, sans-serif;
 	font-size: 15px;
 	font-weight: bold;
 	text-align: left;
@@ -203,28 +201,21 @@ header {
 
 /* no change if removed */
 #header_nav_menu ul li:hover>ul li a:hover {
-	background: #f1831d; /* Old browsers */
-	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-	background: -moz-linear-gradient(top, #f3f3f3 60%, #f1831d 100%);
-	/* FF3.6+ */
+	background: #f1831d;
+	background: -moz-linear-gradient(top, #f3f3f3 60%, #f1831d 100%);/* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #f3f3f3),
 		color-stop(100%, #f1831d)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #f3f3f3 60%, #f1831d 100%);
-	/* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #f3f3f3 60%, #f1831d 100%);
-	/* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #f3f3f3 60%, #f1831d 100%);
-	/* IE10+ */
-	background: linear-gradient(to bottom, #f3f3f3 60%, #f1831d 100%);
-	/* W3C */
+	background: -webkit-linear-gradient(top, #f3f3f3 60%, #f1831d 100%);/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f3f3f3 60%, #f1831d 100%);/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f3f3f3 60%, #f1831d 100%);/* IE10+ */
+	background: linear-gradient(to bottom, #f3f3f3 60%, #f1831d 100%);/* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3',
 		endColorstr='#f1831d', GradientType=0); /* IE6-8 */
 	filter: alpha(opacity = 100);
 	color: #7f2b82;
 	opacity: 1;
 	-moz-opacity: 1;
-	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
-		sans-serif;
+	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial, sans-serif;
 	font-size: 15px;
 	font-weight: bold;
 	text-decoration: none;
@@ -237,8 +228,61 @@ header {
 	float: none;
 	position: relative;
 }
-/* End header and menu css */
+/* End header and menu */
+
+/* --- AUTO-RESIZE HEADER ---*/
+header.smaller {
+    height: 75px;
+}
+header.smaller #header_title {
+    width: 150px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 30px;
+}
+header.smaller #header_nav_menu {
+    line-height: 75px;
+}
+
+@media all and (max-width: 660px) {
+    header #header_title {
+        display: block;
+        float: none;
+        margin: 0 auto;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+    }
+    header #header_nav_menu {
+        display: block;
+        float: none;
+        height: 50px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    header #header_nav_menu ul {
+        line-height: 50px;
+        margin: 0 10px;
+    }
+    header.smaller {
+        height: 75px;
+    }
+    header.smaller #header_title {
+        height: 40px;
+        line-height: 40px;
+        font-size: 30px;
+    }
+    header.smaller #header_nav_menu {
+        height: 35px;
+    }
+    header.smaller #header_nav_menu ul {
+        line-height: 35px;
+    }
+}
+
+/* --- REST OF BODY --- */
 .body_container {
+	margin-top: 160px;
 	position: relative;
 	z-index: -1;
 	background: #f3f3f3 url("../res/img/body_bg.png");
@@ -280,35 +324,35 @@ h2:before {
 }
 
 footer {
+	background-color: #ff7a20;
 	position: relative;
 	z-index: 0;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	height: 110px;
-	margin-top: 20px;
-	background-color: #ff7a20;
 	text-align: center;
-	color: #ffffff;
 }
 
 footer #left_footer_child {
 	background-color: #2eafb0;
 	height: 100px;
+	width: 50%;
 	margin: 0;
 	color: #ffffff;
 	float: left;
 	display: inline-block;
-	width: 50%;
+	
 }
 
 footer #right_footer_child {
 	background-color: #2eafb0;
 	height: 100px;
+	width: 50%;
 	float: right;
 	display: inline-block;
-	width: 50%;
-	height: 100px;
+	color: #ffffff;
+	
 }
 
 .three-column {

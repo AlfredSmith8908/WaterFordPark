@@ -1,3 +1,6 @@
+<%@ page language="java"
+	contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
 	"http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -19,6 +22,7 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script>
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+	<script type="text/javascript" src="js/klassedit.js"></script>
 	
 	<!-- below script has testing tools and html shiv together
 	<script
@@ -30,17 +34,16 @@
 <body>
 
 	<header>
-	<div id="header_left_child">
+	<div id="header_container">
+		<div id="login_div"><a id="modal_trigger" href="#modal">Login</a></div>
+		
 		<h1 id="header_title">Waterford Park Community</h1>
-	</div>
-	<div id="header_right_child">
 		<p>YOUR SOURCE FOR COMMUNITY EVENTS</p>
 	</div>
-	</header>
-
-	<!-- ---------- START HEADER MENU NAV BAR ----------- -->
-	<div id="header_menu_container">
-		<nav id="header_nav_menu"> <!-- need to insert page links to these once created -->
+	<!-- ---------- HEADER MENU NAV BAR ----------- -->
+	<div id="header_right_child">
+		<div><a id="modal_trigger" href="#modal">Login</a></div><br>
+		<nav id="header_nav_menu">
 		<ul>
 			<li><a href="index.jsp"><img src="res/img/menu_home_icon.png" alt="menu home icon"></img></a></li>
 			<li><a href="">Forum</a></li>
@@ -65,106 +68,13 @@
 					<li><a href="">About this site</a></li>
 					<li><a href="">Contact Info</a></li>
 				</ul></li>
-			<li><a id="modal_trigger" href="#modal">Login/Sign up</a></li>
 		</ul>
 		</nav>
 	</div>
-	<!-- END MENU NAV BAR CODE -->
+	</header>
+	<!-- END HEADER -->
 
-	
-	
-	<!-- BEGIN BODY CONTENT -- LEFT SIDE MENU -->
-	<div class="body_container">
-
-		<section class="body_section"> <span id="top_span_anchor"></span>
-		<h2>Latest News in Reynoldsburg</h2>
-		<p>
-			This will be sections of local news articles that we can grab from
-			news sites using their embedded links and CITE THEIR LINK so it's not
-			stealing. Basically provide NEWS CLIPS with a link to the original
-			news source to allow them to read further if they wish. This way
-			everyone is a happy data pig.<br>
-			CATS! EVERYWHERE!<br>
-			 example bs words repeated over
-			and over, omg why the heck am I still up at 4am!?? example bs words repeated over
-			and over, omg why the heck am I still up at 4am!??example bs words repeated over
-			and over, omg why the heck am I still up at 4am!??example bs words repeated over
-			and over, omg why the heck am I still up at 4am!??example bs words repeated over
-			and over, omg why the heck am I still up at 4am!??example bs words repeated over
-			and over, omg why the heck am I still up at 4am!??example bs words repeated over
-			and over, omg why the heck am I still up at 4am!??example bs words repeated over
-			and over, omg why the heck am I still up at 4am!??example bs words repeated over
-			and over, omg why the heck am I still up at 4am!??example bs words repeated over
-			and over, omg why the heck am I still up at 4am!??example bs words repeated over
-			and over, omg why the heck am I still up at 4am!??example bs words repeated over
-			and over, omg why the heck am I still up at 4am!??
-		</p>
-		</section>
-
-		<section class="body_section">
-		<h2>more?</h2>
-		<p class="three-column">gotta say more crap. example bs words
-			repeated over and over, omg why the heck am I still up at 3am!??
-			example bs words repeated over and over, omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? omg why the heck am I still
-			up at 4am!?? </p>
-		</section>
-
-		<section class="body_section">
-		<h2>what else is there?</h2>
-		<p>how much bs do I gotta come up with? example bs words repeated
-			over and over, omg why the heck am I still up at 3am!?? example bs
-			words repeated over and over, omg why the heck am I still up at
-			3am!?? example bs words repeated over and over, omg why the heck am I
-			still up at 3am!?? example bs words repeated over and over, omg why
-			the heck am I still up at 3am!?? example bs words repeated over and
-			over, omg why the heck am I still up at 3am!?? example bs words
-			repeated over and over, omg why the heck am I still up at 3am!??
-			example bs words repeated over and over, omg why the heck am I still
-			up at 3am!?? example bs words repeated over and over, omg why the
-			heck am I still up at 3am!?? example bs words repeated over and over,
-			omg why the heck am I still up at 3am!?? example bs words repeated
-			over and over, omg why the heck am I still up at 3am!??</p>
-
-		</section>
-
-		<div class="return_top_div">
-			<a href="#top_span_anchor">Return to Top</a>
-		</div>
-	</div>
-	<!-- Close body container -->
-
-	<footer>
-		<div id="left_footer_child">
-		<small><br><br>Copyright &copy; Alfred Smith &amp; Raylite 
-			2015<br> Contact: <em>raylite888@outlook.com</em>
-		</small>
-		</div>
-		<div id="right_footer_child"><a href=""><img style="width: 250px; background: #f3f3f3;  margin-top: 15px;" 
-		src="res/img/codicate_logo.png" alt="codicate logo"></img></a>
-		</div>
-	</footer>
-	
-	
-	<!----------- BEGIN LOGIN POPUP FORM ------------>
+<!----------- BEGIN LOGIN POPUP FORM ------------>
 <div class="container">
 	<div id="modal" class="popupContainer" style="display:none;">
 		<div class="popupHeader">
@@ -252,9 +162,150 @@
 		</section>
 	</div>
 </div>
-	<!-- END LOGIN POPUP FORM -->
+<!-- END LOGIN POPUP FORM -->
 	
-	<script type="text/javascript">
+	<!-- BEGIN BODY CONTENT -- LEFT SIDE MENU -->
+	<div class="body_container">
+
+		<section class="body_section"> <span id="top_span_anchor"></span>
+		<h2>Latest News in East Columbus</h2>
+		<p>omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere </p>
+		</section>
+
+		<section class="body_section">
+		<h2>Ha ha ha ha haha</h2>
+		<p class="three-column">omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere </p>
+		</section>
+
+		<section class="body_section">
+		<h2>Ha ha ha ha haha</h2>
+		<p>omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere </p>
+		</section>
+
+		<section class="body_section">
+		<h2>Ha ha ha ha haha</h2>
+		<p>omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere </p>
+		</section>
+		
+		<section class="body_section">
+		<h2>Ha ha ha ha haha</h2>
+		<p>omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere </p>
+		</section>
+		
+		<section class="body_section">
+		<h2>Ha ha ha ha haha</h2>
+		<p>omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere 
+		omg lol cats everywhere omg lol cats everywhere omg lol cats everywhere </p>
+		</section>
+		
+		<div class="return_top_div">
+			<a href="#top_span_anchor">Return to Top</a>
+		</div>
+	</div>
+	<!-- Close body container -->
+
+	<!-- BEGIN FOOTER -->
+	<footer>
+		<div id="left_footer_child">
+		<small><br><br>Copyright &copy; Alfred Smith 2015</small>
+		</div>
+		<div id="right_footer_child"><a href=""><img style="width: 175px; background: #f3f3f3;  margin-top: 15px;" 
+		src="res/img/codicate_logo.png" alt="codicate logo"></img></a>
+		<br>
+		<small><em>raylite888@outlook.com</em></small>
+		</div>
+	</footer>
+	<!-- END FOOTER -->
+	
+<!-- JavaScript -->
+<script type="text/javascript">
+	function init() {
+		window.addEventListener('scroll', function(e){
+			var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+				shrinkOn = 300,
+				header = document.getElementById("head");
+			if (distanceY > shrinkOn) {
+				addKlass(header,"smaller");
+			} else if (hasKlass(header,"smaller")) {
+				removeKlass(header,"smaller");
+			}
+		});
+	}
+	window.onload = init();
+</script>
+
+<script type="text/javascript">
 	$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".modal_close" });
 
 	$(function(){
@@ -281,9 +332,8 @@
 			$(".popupHeader_title").text('Login');
 			return false;
 		});
-
 	})
-	</script>
+</script>
 	
 </body>
 </html>
