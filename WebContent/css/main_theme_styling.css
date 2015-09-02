@@ -7,31 +7,12 @@ html, body {
 
 header {
 	width: 100%;
-	height: 160px;
+	height: 150px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 888;
-	background-color: #ff7a20;
-	
-	-webkit-transition: height 0.3s;
-	-moz-transition: height 0.3s;
-	-ms-transition: height 0.3s;
-	-o-transition: height 0.3s;
-	transition: height 0.3s;
-}
-
-header #header_container {
-	height: 150px;
-	width: 100%;
-	margin-top: 10px;
-	position: relative;
-	
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-ms-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+	border-top: 10px solid #ff7a20;
 	
 	background: #2eafb0;
 	background: -moz-linear-gradient(top, #6ec1c2 0%, #2eafb0 100%); /* FF3.6+ */
@@ -43,58 +24,89 @@ header #header_container {
 	background: linear-gradient(to bottom, #6ec1c2 0%, #2eafb0 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6ec1c2',
 		endColorstr='#2eafb0', GradientType=0); /* IE6-8 */
+		
+	-webkit-transition: height 0.3s ease;
+	-moz-transition: height 0.3s ease;
+	-ms-transition: height 0.3s ease;
+	-o-transition: height 0.3s ease;
+	transition: height 0.3s ease;
 }
 
-header #login_div {
+header div#login_div {
 	float: right;
 	margin-right: 20px;
 }
 
-header #login_div a {
+header div#login_div a {
 	color: #ffffff;
 	text-decoration: none;
 	font-family: Verdana, Copperplate Gothic Light, serif;
 }
 
-header #header_title {
+header div#header_title {
+	display: inline-block;
 	float: left;
 	padding-left: 20px;
-	font-family: verdana;
-	color: #ffffff;
+	position: relative;
+	height: 150px;
+	width: 100%;
+	margin: 0px;
+	
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
-header p {
-	float: left;
-	padding-left: 20px;
-	font-family: verdana;
+header div#header_title h2 {
+	position: absolute;
 	color: #ffffff;
+	font-family: verdana;
+	top: 0%;
+	text-align: center;
+	margin: 0px;
+}
+
+header div#header_title p {
+	position: absolute;
+	color: #ffffff;
+	font-family: verdana;
+	top: 20%;
+	margin: 0;
 }
 
 /* --- HEADER NAV MENU --- */
-#header_nav_menu {
-	display: inline-block;
+header nav#header_menu_nav {
+	position: relative;
 	float: right;
+	top: -50%;
+	
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
-#header_nav_menu ul {
+header nav#header_menu_nav ul {
 	list-style: none;
-	position: relative;
-	display: block; /* makes menu bar wrap screen width (inline won't) */
+	display: inline-block; /* makes menu bar wrap screen width (inline won't) */
 	text-decoration: none;
 	font-family: Verdana, Copperplate Gothic Light, serif;
-	font-size: 17px;
+	font-size: 14px;
 	color: #ffffff;
 	font-weight: light;
 	outline: none;
 }
 
 /* List items ltr(left), rtl(right),top-bot/vertically(center) */
-#header_nav_menu ul li {
+header nav#header_menu_nav ul li {
 	float: left;
 }
 
 /* Top-level menu buttons, Hovering look and feel */
-#header_nav_menu ul li:hover {
+header nav#header_menu_nav ul li:hover {
 	transition: all 0.5s ease-in-out;
 	/*all (bg and text) OR background (just bg)*/
 	-webkit-transition: all 0.5s ease;
@@ -113,7 +125,7 @@ header p {
 }
 
 /* Top level menu button and link styling */
-#header_nav_menu ul li a {
+header nav#header_menu_nav ul li a {
 	color: #ffffff; /* Top-level menu button link-text color */
 	display: block;
 	padding: 12px 20px;
@@ -124,7 +136,7 @@ header p {
 }
 
 /* menu and submenu text on hovering */
-#header_nav_menu ul li:hover a {
+header nav#header_menu_nav ul li:hover a {
 	color: #2eafb0; /* menu item and sub-item text color on hover */
 	filter: alpha(opacity = 100);
 	opacity: 1;
@@ -132,13 +144,13 @@ header p {
 }
 
 /* Tells the nav-ul-ul level not to always display menu contents */
-#header_nav_menu ul ul {
+header nav#header_menu_nav ul ul {
 	display: none;
 	z-index: 889
 }
 
 /* no change if removed */
-#header_nav_menu ul li:hover>ul {
+header nav#header_menu_nav ul li:hover>ul {
 	background: #f1831d; /* Sub-menu background color */
 	text-decoration: none;
 	display: block; /* sub-menu allowed to display */
@@ -155,8 +167,7 @@ header p {
 	list-style-type: none;
 }
 
-/* no change if removed */
-#header_nav_menu ul li:hover>ul li a {
+header nav#header_menu_nav ul li:hover>ul li a {
 	text-decoration: none;
 	color: #ffffff;
 	filter: alpha(opacity = 100);
@@ -169,8 +180,7 @@ header p {
 	text-align: left;
 }
 
-/* no change if removed */
-#header_nav_menu ul li:hover>ul li a:hover {
+header nav#header_menu_nav ul li:hover>ul li a:hover {
 	background: #f1831d;
 	background: -moz-linear-gradient(top, #f3f3f3 60%, #f1831d 100%);/* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #f3f3f3),
@@ -193,54 +203,25 @@ header p {
 }
 
 /* Sub-menu list item, No Change when Removed */
-#header_nav_menu ul ul li {
+header nav#header_menu_nav ul ul li {
 	text-decoration: none;
 	float: none;
 	position: relative;
 }
 /* End header and menu */
 
-/* --- AUTO-RESIZE HEADER ---*/
+/* --- AUTO-RESIZE HEADER Class .smaller ---*/
 header.smaller {
-    height: 75px;
-}
-header.smaller #header_title {
-    height: 75px;
-    font-size: 30px;
-}
-header.smaller #header_nav_menu {
+	height: 75px;
 }
 
+header.smaller nav#header_menu_nav {
+	top: -200%;
+}
+
+/* --- Window Resize ---*/
 @media all and (max-width: 660px) {
-    header #header_title {
-        display: block;
-        float: none;
-        margin: 0 auto;
-        height: 100px;
-        text-align: center;
-    }
-    header #header_nav_menu {
-        display: block;
-        float: none;
-        height: 50px;
-        text-align: center;
-        margin: 0 auto;
-    }
-    header #header_nav_menu ul {
-        margin: 0 10px;
-    }
-    header.smaller {
-        height: 75px;
-    }
-    header.smaller #header_title {
-        height: 40px;
-        font-size: 30px;
-    }
-    header.smaller #header_nav_menu {
-        height: 35px;
-    }
-    header.smaller #header_nav_menu ul {
-    }
+
 }
 
 /* --- REST OF BODY --- */
@@ -337,251 +318,4 @@ footer #right_footer_child {
 	-webkit-column-gap: 1em;
 	column-count: 2;
 	column-gap: 1em;
-}
-
-/* --------  LOGIN STYLING ALL HERE  ---------- */
-#lean_overlay {
-	position: fixed;
-	z-index: 999;
-	top: 0px;
-	left: 0px;
-	height: 100%;
-	width: 100%;
-	background: #000;
-	display: none;
-}
-
-.popupContainer {
-	position: absolute;
-	width: 330px;
-	height: auto;
-	left: 45%;
-	top: 80px;
-	background: #FFF;
-}
-
-#modal_trigger {
-	
-}
-
-.btn {
-	padding: 10px 20px;
-	background: #F4F4F2;
-}
-
-.btn_red {
-	background: #E2769F;
-	color: #FFF;
-}
-
-.btn:hover {
-	background: #E4E4E2;
-}
-
-.btn_red:hover {
-	background: #e41a6a;
-}
-
-a.btn {
-	color: #666;
-	text-align: center;
-	text-decoration: none;
-	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
-		sans-serif;
-}
-
-a.btn_red {
-	color: #FFF;
-	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
-		sans-serif;
-}
-
-.one_half {
-	width: 48%;
-	display: block;
-	float: left;
-	border-right: 1px solid #DDD;
-	border-bottom: 1px solid #DDD;
-}
-
-.one_half.last {
-	width: 45%;
-	margin-left: 5%;
-}
-
-/* Popup Styles*/
-.popupHeader_title {
-	font-size: 16px;
-	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
-		sans-serif;
-	text-transform: uppercase;
-	color: #f1831d;
-}
-
-.popupHeader {
-	background: #F4F4F2;
-	position: relative;
-	padding: 10px 20px;
-	border-bottom: 1px solid #DDD;
-	font-weight: bold;
-}
-
-.popupHeader .modal_close {
-	position: absolute;
-	right: 0;
-	top: 0;
-	padding: 10px 15px;
-	background: #E4E4E2;
-	cursor: pointer;
-	color: #aaa;
-	font-size: 16px;
-}
-
-.popupBody {
-	padding: 20px;
-}
-
-/* Social Login Form */
-.social_login {
-	
-}
-
-.social_login .social_box {
-	display: block;
-	clear: both;
-	padding: 10px;
-	margin-bottom: 10px;
-	background: #F4F4F2;
-	border-right: 1px solid #DDD;
-	border-bottom: 1px solid #DDD;
-	overflow: hidden;
-}
-
-.social_login .icon {
-	display: block;
-	width: 10px;
-	padding: 5px 10px;
-	margin-right: 10px;
-	float: left;
-	color: #FFF;
-	font-size: 16px;
-	text-align: center;
-}
-
-.social_login .fb .icon {
-	background: #3B5998;
-}
-
-.social_login .google .icon {
-	background: #DD4B39;
-}
-
-.social_login .icon_title {
-	display: block;
-	padding: 5px 0;
-	float: left;
-	font-weight: bold;
-	font-size: 16px;
-	color: #777;
-}
-
-.social_login .social_box:hover {
-	background: #E4E4E2;
-}
-
-.centeredText {
-	text-align: center;
-	margin: 20px 0;
-	clear: both;
-	overflow: hidden;
-	color: #2eafb0;
-	font-family: Verdana, Helvetica, Copperplate Gothic Light, Arial,
-		sans-serif;
-	text-transform: uppercase;
-}
-
-.action_btns {
-	clear: both;
-	overflow: hidden;
-}
-
-.action_btns a {
-	display: block;
-}
-
-/* User Login Form */
-.user_login {
-	display: none;
-}
-
-.user_login label {
-	display: block;
-	margin-bottom: 5px;
-}
-
-.user_login input[type="text"], .user_login input[type="email"],
-	.user_login input[type="password"] {
-	display: block;
-	width: 90%;
-	padding: 10px;
-	border: 1px solid #DDD;
-	color: #666;
-}
-
-.user_login input[type="checkbox"] {
-	float: left;
-	margin-right: 5px;
-}
-
-.user_login input[type="checkbox"]+label {
-	float: left;
-}
-
-.user_login .checkbox {
-	margin-bottom: 10px;
-	clear: both;
-	overflow: hidden;
-}
-
-.forgot_password {
-	display: block;
-	margin: 20px 0 10px;
-	clear: both;
-	overflow: hidden;
-	text-decoration: none;
-	color: #E2769F;
-}
-
-/* User Register Form */
-.user_register {
-	display: none;
-}
-
-.user_register label {
-	display: block;
-	margin-bottom: 5px;
-}
-
-.user_register input[type="text"], .user_register input[type="email"],
-	.user_register input[type="password"] {
-	display: block;
-	width: 90%;
-	padding: 10px;
-	border: 1px solid #DDD;
-	color: #666;
-}
-
-.user_register input[type="checkbox"] {
-	float: left;
-	margin-right: 5px;
-}
-
-.user_register input[type="checkbox"]+label {
-	float: left;
-}
-
-.user_register .checkbox {
-	margin-bottom: 10px;
-	clear: both;
-	overflow: hidden;
 }

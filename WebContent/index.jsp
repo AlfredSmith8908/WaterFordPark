@@ -14,8 +14,9 @@
 
 	<title>Waterford Park Community Site</title>
 
-	<link type="text/css" rel="stylesheet" href="css/main_theme_styling.css">
 	<!-- load external css -->
+	<link type="text/css" rel="stylesheet" href="css/main_theme_styling.css">
+	<link type="text/css" rel="stylesheet" href="css/login_popup.css">
 
 	<!-- Add Javascript to html page with script tags, usually added before /body tag -->
 	<!-- Below Javascript is called HTML Shiv, needed for IE to render HTML5 tags properly -->
@@ -34,13 +35,16 @@
 <body>
 
 	<!-- ----- BEGIN HEADER ----- -->
-	<header>
-	<div id="header_container">
+<header id="head" >
 		<div id="login_div"><a id="modal_trigger" href="#modal">Login</a></div>
 		
+		<div id="header_title">
+			<h2>Waterford Park Community</h2>
+			<p>YOUR SOURCE FOR COMMUNITY EVENTS</p>
+		</div>
+		
 	<!-- ---------- HEADER MENU NAV BAR ----------- -->
-	<div id="header_menu_div">
-		<nav id="header_nav_menu">
+		<nav id="header_menu_nav">
 		<ul>
 			<li><a href="index.jsp"><img src="res/img/menu_home_icon.png" alt="menu home icon"></img></a></li>
 			<li><a href="">Forum</a></li>
@@ -67,13 +71,7 @@
 				</ul></li>
 		</ul>
 		</nav>
-	</div>
-	
 	<!-- END HEADER MENU -->
-		
-		<div id="header_title">Waterford Park Community
-		<p>YOUR SOURCE FOR COMMUNITY EVENTS</p></div>
-	</div>
 </header>
 	
 
